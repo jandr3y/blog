@@ -1,57 +1,62 @@
-<header>
+# Ephesus
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+Ephesus Jekyll Theme - Simple and Minimal Jekyll Blog Theme
 
-# GitHub Pages
+Author [Hakan Torun](https://hakan.io).
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+- **Demo:** https://pardin.us/ephesus/
 
-</header>
+### Features
 
-<!--
-  <<< Author notes: Finish >>>
-  Review what we learned, ask for feedback, provide next steps.
--->
+- [x] Tiny CSS & No Dependency
+- [x] Responsive Design
+- [x] Dark/Light Theme
+- [x] Custom 404 Page
+- [x] About Page
+- [x] Tags Page
+- [x] Code Highlighter
+- [x] Social Share
+- [x] Atom & Json feeds
+- [x] Robots.txt
+- [x] Sitemap
+- [x] Next & Previous Post
+- [x] Pagination
+- [x] Disqus
+- [x] Mathjax Support
+- [x] Google Analytics
 
-## Finish
+## Screenshots
 
-_Congratulations friend, you've completed this course!_
+#### Light
+![light-theme](https://github.com/onepase/Ephesus/blob/master/light.png)
 
-<img src=https://octodex.github.com/images/constructocat2.jpg alt=celebrate width=300 align=right>
+#### Dark
+![dark-theme](https://github.com/onepase/Ephesus/blob/master/dark.png)
 
-Your blog is now live and has been deployed!
+## Installation
 
-Here's a recap of all the tasks you've accomplished in your repository:
+Run local server:
 
-- You enabled GitHub Pages.
-- You selected a theme using the config file.
-- You learned about proper directory format and file naming conventions in Jekyll.
-- You created your first blog post with Jekyll!
+```bash
+$ git clone https://github.com/onepase/Ephesus.git
+$ cd Ephesus
+$ bundle install
+$ bundle exec jekyll build
+$ bundle exec jekyll serve
+```
 
-### What's next?
+Navigate to `127.0.0.1:4000`.
 
-- Keep working on your GitHub Pages site... we love seeing what you come up with!
-- We'd love to hear what you thought of this course [in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages).
-- [Take another GitHub Skills course](https://github.com/skills).
-- [Read the GitHub Getting Started docs](https://docs.github.com/en/get-started).
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
+Tags are created automatically under the /tags page.
 
-<footer>
+To use a math formula in a post, use the mathjax:true tag in the post.
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+## Contributing
 
----
+Feel free to open a pull request for contributing.
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+Please feel free to contribute. Do not hesitate to open a pull request and fix it, please read [contributing](./CONTRIBUTING.md) before PR.
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+## License
 
-</footer>
+This project is open source and available under the [MIT License](LICENSE.md).
