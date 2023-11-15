@@ -15,10 +15,21 @@ layout: default
 		<a href="https://api.whatsapp.com/send?text={{site.url}}/{{page.slug}}" target="_blank"><img src="assets/images/icon/whatsapp.svg" class="social-icon"></a>
 	</div>
 </div>
-
 <div class="blog-post-content">
 	<h1>{{page.title}}</h1>
 	{{ content }}
+	{% for tag in page.tags %}
+		{% if tag == 'diário' %}
+		<div class="warning">
+			
+			<strong>AVISO:</strong> Esse diário foi escrito pela minha vó quando eu não sabia que eu era eu. Nenhuma palavra foi alterada ou revisada, apenas foi ocultados alguns nomes, endereços para preservar o minimo de privacidade possível.
+		</div>
+		{% endif %}
+	{% endfor %}
+</div>
+<div class="author">
+	<strong>Autor:</strong>
+	{{ page.author }}
 </div>
 <div class="tags-container">
 	{% for tag in page.tags %}

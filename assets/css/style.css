@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;900&display=swap');
 :root {
     --bg-color: #fafafa;
     --bg-hover-color: #ececec;
@@ -16,13 +16,15 @@
 }
 
 body{
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Merriweather', serif;
   font-weight: 300;
   background: var(--body-bg);
   color: var(--primary-font-color);
   margin: 0;
   padding: 5px;
+  font-size: 12px;
 }
+strong { font-weight: bold;}
 .container{
   display: flex; 
   flex-direction: row; 
@@ -48,7 +50,6 @@ body{
   width: 100%;
   padding: 5px 10px;
   background: var(--bg-color);
-  border:1px dashed var(--border-color);
   font-size: 12px;
 }
 
@@ -62,7 +63,8 @@ body{
   padding: 5px 10px;
   margin-bottom: 5px;
   background:var(--bg-color);
-  border: 1px dashed var(--border-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4.5px;
 }
 
 .post-list:hover{
@@ -135,9 +137,16 @@ body{
 
 .blog-post-content{
   width: 100%;
-  font-size: 18px;
+  font-size: 1.2em;
 }
+.blog-post-content span { color: black; background: black; }
+.blog-post-content .note { border: 1px solid black; margin: 20px 0; padding: 5px; font-size: 0.8em; border-style: dashed; }
 
+.warning {
+  background: rgba(0,0,0,0.04);
+  margin: 30px 0;
+  padding: 20px;
+}
 .post-tag{background: var(--bg-color); color:var(--primary-font-color); padding: 5px 10px;}
 
 .profile{
