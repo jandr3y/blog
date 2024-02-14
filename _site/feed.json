@@ -1,0 +1,39 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Lucas Andrade Jandrey",
+    "home_page_url": "http://localhost:4000/",
+    "feed_url": "http://localhost:4000/feed.json",
+    "description": "Blog pessoal para falar sobre tecnologia, alegria e frustrações da vida.",
+    "icon": "http://localhost:4000/assets/images/apple-touch-icon.png",
+    "favicon": "http://localhost:4000/assets/images/favicon.png",
+    "expired": false,
+    
+    "author":  {
+        "name": "Lucas Andrade Jandrey",
+        "url": null,
+        "avatar": null
+    },
+    
+"items": [
+    
+        {
+            "id": "http://localhost:4000/playlist-geral/",
+            "title": "Teste Youtube",
+            "summary": null,
+            "content_text": "    ",
+            "content_html": "<div class=\"embed-container\">    <iframe width=\"640\" height=\"390\" src=\"https://www.youtube.com/embed/M1PcxAESEnY\" frameborder=\"0\" allowfullscreen=\"\"></iframe></div><style>.embed-container {  position: relative;  padding-bottom: 56.25%;  height: 0;  overflow: hidden;  max-width: 100%;}.embed-container iframe,.embed-container object,.embed-container embed {  position: absolute;  top: 0;  left: 0;  width: 100%;  height: 100%;}</style>",
+            "url": "http://localhost:4000/playlist-geral/",
+            
+            
+            
+            "tags": ["arte","música"],
+            
+            "date_published": "2023-11-13T00:00:00+00:00",
+            "date_modified": "2023-11-13T00:00:00+00:00",
+            
+                "author": "Lucas Jandrey"
+            
+        }
+    
+    ]
+}
