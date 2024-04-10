@@ -52,23 +52,23 @@ last_works:
 
 hard_skills:
   - name: PHP
-    icon: /assets/images/icons/php.svg
+    icon: icons/php.svg
     years: 8 Anos
     description: Laravel, Phalcon Framework, Slim Micro-framework, Testes, PHP Spredsheet, FPM
   - name: Javascript
-    icon: /assets/images/icons/javascript.svg
+    icon: icons/javascript.svg
     years: 8 Anos
     description: NodeJS, TypeScript, Express, Restify, Gulp, Webpack, ReactJS, Canvas, jQuery
   - name: ReactJS
-    icon: /assets/images/icons/react.svg
+    icon: icons/react.svg
     years: 5 Anos
     description: ContextAPI, Redux, StyledComponents, MaterialUI
   - name: AWS
-    icon: /assets/images/icons/aws.svg
+    icon: icons/aws.svg
     years: 3 Anos
     description: EC2, S3, CloudFront, VPC, RDS, CodePipeline
   - name: Outras Ferramentas
-    icon: /assets/images/icons/linux.svg
+    icon: icons/linux.svg
     description: Linux, Docker, Nginx, Github Actions, Gitlab CI/CD, Jira Software, Jira Service Management
 
 soft_skills:
@@ -118,7 +118,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-relative-links
 paginate: 20
-paginate_path: "/page/:num"
+paginate_path: "/blog/:num"
 
 collections:
   pages:

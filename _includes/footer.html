@@ -1,30 +1,64 @@
-	<footer class="footer bg-primary">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					Theme - <strong>Lucas Jandrey</strong>
-				</div>
-				<div class="col-lg-6 footer__by">
-					<strong>Github Pages</strong>
-				</div>
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				Theme - <strong>Lucas Jandrey</strong>
+			</div>
+			<div class="col-lg-6 footer__by">
+				<strong>Github Pages</strong>
 			</div>
 		</div>
-	</footer>
-	<script src="assets/js/ephesus.js"></script>
-	<script src="assets/js/aos.js"></script>
-	<script type="text/javascript">
-  		AOS.init();
-	</script>
+	</div>
+</footer>
+<script src="/assets/js/ephesus.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script type="text/javascript" defer>
+	AOS.init();
 
-	{% if site.google_analytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+	function switchTheme(e) {
+		const currentTheme = document.documentElement.dataset.theme;
+		if (currentTheme === 'light') {
+			document.documentElement.setAttribute('data-theme', 'dark');
+		} else {
+			document.documentElement.setAttribute('data-theme', 'light');
+		}
 
-      gtag('config', '{{site.google_analytics}}');
-    </script>
-	{% endif %}
+		switchButtonIcon();
+	}
+
+	function switchButtonIcon() {
+		document.querySelectorAll('.navigation__theme-mode span').forEach(item => item.style.display = 'none');
+		if (document.documentElement.dataset.theme === 'light') {
+			document.querySelector('span.light').style.display = 'block';
+		} else {
+			document.querySelector('span.dark').style.display = 'block';
+		}
+	}
+
+	function highlightMenuItem() {
+		const path = window.location.pathname;
+		const el = document.querySelector(`li[data-href="${path}"]`);
+		if (el) {
+			el.classList.add('active')
+		}
+	}	
+
+	document.querySelector('.navigation__theme-mode').addEventListener('click', switchTheme);
+
+	highlightMenuItem();
+	switchButtonIcon();
+</script>
+
+{% if site.google_analytics %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', '{{site.google_analytics}}');
+</script>
+{% endif %}
 </body>
+
 </html>
