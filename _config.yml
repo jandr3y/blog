@@ -1,6 +1,6 @@
 # Site settings
 site: Ephesus
-title: Lucas Andrade Jandrey
+title: Jandrey
 keywords: personal, blog, tecnologia, tech, developer
 description: >-
   Blog pessoal para falar sobre tecnologia, alegria e frustrações da vida.
@@ -9,7 +9,7 @@ timezone:  Sao_Paulo/Brasil
 logo: /assets/images/logo.png
 #repo: https://github.com/onepase/Ephesus # site repo [optional]
 #google_verify:      XXX # Put your Google Verification here
-#google_analytics:   UA-XXXXXXXX-00 # Put your Google Analytics code
+google_analytics: G-YBRQKJ6YXS # Put your Google Analytics code
 last_works:
   - position: Tech Lead
     company: Codesign - Software House
