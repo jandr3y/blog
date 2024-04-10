@@ -2,12 +2,14 @@
 layout: default
 ---
 
-<div class="post-container">
-	<div class="post-list">
-		<span class="post-title">{{page.title}}</span>
+<div class="bg-primary home">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>{{page.title}}</h1>
+			</div>
+		</div>
 	</div>
 </div>
-<div class="blog-post-content">
-	<h1>{{page.title}}</h1>
-	{{ content }}
-</div>
+
+{{ content }}

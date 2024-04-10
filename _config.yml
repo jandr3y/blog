@@ -1,20 +1,91 @@
 # Site settings
 site: Ephesus
-title: Lucas Jandrey
+title: Jandrey
 keywords: personal, blog, tecnologia, tech, developer
 description: >-
   Blog pessoal para falar sobre tecnologia, alegria e frustrações da vida.
 lang: pt-BR
 timezone:  Sao_Paulo/Brasil
+logo: /assets/images/logo.png
 #repo: https://github.com/onepase/Ephesus # site repo [optional]
 #google_verify:      XXX # Put your Google Verification here
-#google_analytics:   UA-XXXXXXXX-00 # Put your Google Analytics code
+google_analytics: G-YBRQKJ6YXS # Put your Google Analytics code
+last_works:
+  - position: Tech Lead
+    company: Codesign - Software House
+    date: (2023-2024)
+    image: /assets/images/codesign.jpeg
+    description: Liderança técnica, orientando o time de desenvolvimento na escolha de tecnologias, arquitetura de código e infraestrutura em nuvem (AWS). Mantive interação próxima com o suporte a clientes e antecipar possíveis problemas futuros.
+    skills:
+      - JIRA
+      - AWS
+      - Github Actions
+  - position: Full Stack Developer
+    company: Codesign - Software House
+    date: (2021-2023)
+    image: /assets/images/codesign.jpeg
+    description: Desenvolvimento de APIs utilizando Laravel (PHP) para sistemas financeiros, além da criação de interfaces web com React.JS e implementação de infraestrutura em nuvem (AWS).
+    skills:
+      - Laravel
+      - ReactJS
+      - Docker
+  - position: Full Stack Developer
+    company: Grupo CaspBrasil 
+    date: (2018-2021)
+    image: /assets/images/casp.jpeg
+    description: Contribuições significativas no desenvolvimento de uma plataforma de inscrições de eventos online e plugins de integração para Wordpress.
+    skills:
+      - PhalconPHP
+      - Angular
+      - Gitlab
+      - Wordpress
+  - position: Estagiário de tecnologia
+    company: Prefeitura de São José dos Pinhais
+    date: (2016-2018)
+    image: /assets/images/prefa.jpeg
+    description: Desempenhei o papel de atendente no Help Desk, fornecendo suporte técnico aos funcionários e, posteriormente, desenvolvi sistemas para otimizar as operações da equipe de TI
+    skills:
+      - Javascript
+      - Angular
+      - PHP
+      - Help Desk
+
+hard_skills:
+  - name: PHP
+    icon: icons/php.svg
+    years: 8 Anos
+    description: Laravel, Phalcon Framework, Slim Micro-framework, Testes, PHP Spredsheet, FPM
+  - name: Javascript
+    icon: icons/javascript.svg
+    years: 8 Anos
+    description: NodeJS, TypeScript, Express, Restify, Gulp, Webpack, ReactJS, Canvas, jQuery
+  - name: ReactJS
+    icon: icons/react.svg
+    years: 5 Anos
+    description: ContextAPI, Redux, StyledComponents, MaterialUI
+  - name: AWS
+    icon: icons/aws.svg
+    years: 3 Anos
+    description: EC2, S3, CloudFront, VPC, RDS, CodePipeline
+  - name: Outras Ferramentas
+    icon: icons/linux.svg
+    description: Linux, Docker, Nginx, Github Actions, Gitlab CI/CD, Jira Software, Jira Service Management
+
+soft_skills:
+  - name: Criativo
+  - name: Pensamento crítico
+  - name: Empatia
+  - name: Comunicação eficaz
+  - name: Flexibilidade
+
+
 
 # Author settings
 author:
-  name: Lucas Jandrey
-  bio: Software Developer/Tech Lead<br>Curitiba, PR<br>PHP | TypeScript | SQL
-  picture: assets/images/profile.jpeg 
+  name: Lucas Andrade Jandrey
+  bio: Software Developer<br>Curitiba, PR
+  full_bio: Com aproximadamente oito anos de experiência profissional em programação e um grande foco no desenvolvimento web, atuo em várias áreas desse campo. Meu conhecimento abrange o desenvolvimento de APIs utilizando PHP e Javascript, a criação de interfaces front-end com React, e contribuições significativas para soluções DevOps, com foco em tecnologias como Docker e AWS. Meus interesses atuais giram em torno de temas como escalabilidade, padrões e estruturas de código, além do gerenciamento eficiente de projetos.
+  picture: /assets/images/profile.jpeg 
   github: jandr3y # github usernam
   twitter: jandr3y # twitter username
   instagram: luacks # instagram username
@@ -47,7 +118,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-relative-links
 paginate: 20
-paginate_path: "/page/:num"
+paginate_path: "/blog/:num"
 
 collections:
   pages:

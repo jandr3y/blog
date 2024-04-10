@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Blog - Jandrey</title>
+		<meta name="description" content="Blog pessoal para falar sobre tecnologia, alegria e frustrações da vida.">
+		<meta name="keywords" content="personal, blog, tecnologia, tech, developer">
+		
+		<meta property="og:site_name" content="Jandrey">
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://localhost:4000/"/>
+		<meta property="og:title" content="Blog - Jandrey" />
+		<meta property="og:description" content="Blog pessoal para falar sobre tecnologia, alegria e frustrações da vida." />
+		<meta property="og:image" content="http://localhost:4000/assets/images/favicon.png"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta property="twitter:title" content="Blog - Jandrey" />
+		<meta property="twitter:description" content="Blog pessoal para falar sobre tecnologia, alegria e frustrações da vida." />
+		<meta property="twitter:image" content="http://localhost:4000/assets/images/favicon.png" />
+		<link rel="stylesheet" href="/assets/css/bootstrap-grid.css">
+		<link rel="stylesheet" href="/assets/css/highlight.css">
+		<link rel="stylesheet" href="/assets/css/style.css">
+		<link rel="stylesheet" href="/assets/css/aos.css">
+		<link rel="shortcut icon" href="/assets/images/favicon.png" />
+		<link rel="alternate" type="application/atom+xml" title="Jandrey" href="http://localhost:4000/atom.xml">
+		<link rel="alternate" type="application/json" title="Jandrey" href="http://localhost:4000/feed.json" />
+		<link rel="sitemap" type="application/xml" title="sitemap" href="http://localhost:4000/sitemap.xml" />
+		<meta name="google-site-verification" content="" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	</head>
+<body>
+	<div class="navigation">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-4 col-6 navigation__logo-column">
+					<a href="/">
+						<img src="/assets/images/logo.png" class="navigation__logo" />
+					</a>
+				</div>
+				<div class="col-lg-8 col-6">
+					<ul class="navigation__menu">
+						<li data-href="/about/">
+							<a href="/about">
+								SOBRE
+							</a>
+						</li>
+						<li data-href="/">
+							<a href="/" >
+								BLOG
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="bg-primary home">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>Blog</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+    <div class="row section-spacing">
+        <div class="col-lg-12">
+            <h3>Últimos posts</h3>
+            
+                <div class="posts__item">
+                    <a href="http://localhost:4000/joel-legendre-a-soiree-canadienne">
+                        <h3>Joël Legendre à Soirée Canadienne</h3>
+                        <p>
+                            O idioma principal de Quebec é francês
+                        </p>
+                    </a>
+                    <small>
+                        <time datetime="2023-11-13T00:00:00+00:00" class="post-date">13/11/2023</time>
+                    </small>
+                </div>
+            
+
+            
+            <div class="row">
+	<div class="col-lg-12">
+		
+		<span class="page-number">Página 1 de 1</span>
+		
+	</div>
+</div>
+        </div>
+    </div>
+    
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				Theme - <strong>Lucas Jandrey</strong>
+			</div>
+			<div class="col-lg-6 footer__by">
+				<strong>Github Pages</strong>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="/assets/js/ephesus.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script type="text/javascript" defer>
+	AOS.init();
+
+	function switchTheme(e) {
+		const currentTheme = document.documentElement.dataset.theme;
+		if (currentTheme === 'light') {
+			document.documentElement.setAttribute('data-theme', 'dark');
+		} else {
+			document.documentElement.setAttribute('data-theme', 'light');
+		}
+
+		switchButtonIcon();
+	}
+
+	function switchButtonIcon() {
+		document.querySelectorAll('.navigation__theme-mode span').forEach(item => item.style.display = 'none');
+		if (document.documentElement.dataset.theme === 'light') {
+			const lightEl = document.querySelector('span.light');
+			if (lightEl) lightEl.style.display = 'block';
+		} else {
+			const darkEl = document.querySelector('span.dark');
+			if (darkEl) darkEl.style.display = 'block';
+		}
+	}
+
+	function highlightMenuItem() {
+		const path = window.location.pathname;
+		const el = document.querySelector(`li[data-href="${path}"]`);
+		if (el) {
+			el.classList.add('active')
+		}
+	}
+
+	function bindEvents() {
+		const themeSwitcher = document.querySelector('.navigation__theme-mode');
+
+		if (themeSwitcher) {
+			themeSwitcher.addEventListener('click', switchTheme)
+		}
+	}
+
+	bindEvents();
+	highlightMenuItem();
+	switchButtonIcon();
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBRQKJ6YXS"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'G-YBRQKJ6YXS');
+</script>
+
+</body>
+
+</html>
