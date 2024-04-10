@@ -85,7 +85,7 @@ author:
   name: Lucas Andrade Jandrey
   bio: Software Developer<br>Curitiba, PR
   full_bio: Com aproximadamente oito anos de experiência profissional em programação e um grande foco no desenvolvimento web, atuo em várias áreas desse campo. Meu conhecimento abrange o desenvolvimento de APIs utilizando PHP e Javascript, a criação de interfaces front-end com React, e contribuições significativas para soluções DevOps, com foco em tecnologias como Docker e AWS. Meus interesses atuais giram em torno de temas como escalabilidade, padrões e estruturas de código, além do gerenciamento eficiente de projetos.
-  picture: assets/images/profile.jpeg 
+  picture: /assets/images/profile.jpeg 
   github: jandr3y # github usernam
   twitter: jandr3y # twitter username
   instagram: luacks # instagram username

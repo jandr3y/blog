@@ -4,25 +4,7 @@ title: "Blog"
 ---
 <div class="container">
     <div class="row section-spacing">
-        <div class="col-lg-3">
-            <h3 class="mb-15">Categorias</h3>
-            {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-            {% assign tag_words = site_tags | split:',' | sort %}
-            <div class="list categories">
-                {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-                {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-                    <a href="tags/#{{ this_word | cgi_escape }}" class="tag">
-                        <div class="list__item clickable">
-                            <div class="list__item-title">
-                                {{ this_word }}
-                                <div class="badge">{{ site.tags[this_word].size }}</div>
-                            </div>
-                        </div>
-                    </a>
-                {% endunless %}{% endfor %}
-            </div>
-        </div>
-        <div class="col-lg-9">
+        <div class="col-lg-12">
             <h3>Últimos posts</h3>
             {% for post in site.posts %}
                 <div class="posts__item">

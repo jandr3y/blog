@@ -29,9 +29,11 @@
 	function switchButtonIcon() {
 		document.querySelectorAll('.navigation__theme-mode span').forEach(item => item.style.display = 'none');
 		if (document.documentElement.dataset.theme === 'light') {
-			document.querySelector('span.light').style.display = 'block';
+			const lightEl = document.querySelector('span.light');
+			if (lightEl) lightEl.style.display = 'block';
 		} else {
-			document.querySelector('span.dark').style.display = 'block';
+			const darkEl = document.querySelector('span.dark');
+			if (darkEl) darkEl.style.display = 'block';
 		}
 	}
 
@@ -41,10 +43,17 @@
 		if (el) {
 			el.classList.add('active')
 		}
-	}	
+	}
 
-	document.querySelector('.navigation__theme-mode').addEventListener('click', switchTheme);
+	function bindEvents() {
+		const themeSwitcher = document.querySelector('.navigation__theme-mode');
 
+		if (themeSwitcher) {
+			themeSwitcher.addEventListener('click', switchTheme)
+		}
+	}
+
+	bindEvents();
 	highlightMenuItem();
 	switchButtonIcon();
 </script>

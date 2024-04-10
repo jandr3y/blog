@@ -102,7 +102,7 @@ h1, h2, h3, h4, p {
 
 .bg-primary {
   background-color: var(--primary-color);
-  padding: 20px;
+  padding: 20px 0;
   color: white;
 }
 
@@ -313,5 +313,9 @@ h1, h2, h3, h4, p {
 
   .footer__by {
     text-align: left;
+  }
+
+  .bg-primary.home h1 {
+    text-align: center;
   }
 }
