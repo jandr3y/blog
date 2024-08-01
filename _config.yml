@@ -11,6 +11,14 @@ logo: /assets/images/logo.png
 #google_verify:      XXX # Put your Google Verification here
 google_analytics: G-YBRQKJ6YXS # Put your Google Analytics code
 last_works:
+  - position: Full Stack Developer
+    company: Rentcars
+    date: (2024-current)
+    image: /assets/images/rentcars.png
+    description: Desenvolver soluções principalmente na área de experiência do usuário, criando novos fluxos e mantendo soluções já existentes, analisando possíveis implementações para guiar o time de desenvolvimento.
+    skills:
+      - PHP
+      - VueJS
   - position: Tech Lead
     company: Codesign - Software House
     date: (2023-2024)
