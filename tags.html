@@ -1,30 +1,87 @@
 ---
-layout: page
-title: "Tags"
-permalink: /tags/
+title: Tags
+layout: default
+description: "A mente do vilão separada por temas"
+header-img: "img/bg-little-universe.jpg"
 ---
+
+<!--
+Credits: this page shamelessly borrowed a lot from:
+https://github.com/kitian616/jekyll-TeXt-theme
+-->
+<!-- Page Header -->
+{% include intro-header.html type='page' short=true %}
+
+<!-- Main Content -->
 <div class="container">
-	{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-	{% assign tag_words = site_tags | split:',' | sort %}
-	<div class="w-100">
-		<div class="tags">
-			{% for item in (0..site.tags.size) %}{% unless forloop.last %}
-			{% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-				<a href="tags/#{{ this_word | cgi_escape }}" class="tag">{{ this_word }} <span>({{ site.tags[this_word].size }})</span></a>
-			{% endunless %}{% endfor %}
-		</div>
-	</div>
-	<div class="post-container">
-		{% for item in (0..site.tags.size) %}{% unless forloop.last %}
-		{% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-		<h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
-	
-		{% for post in site.tags[this_word] %}{% if post.title != null %}
-			<div class="post-list">
-				<a class="post-title" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-				<time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%d.%m.%Y" }}</time>
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<!-- Tags (as filter) -->
+			<div id='tag_cloud' class="tags tags-sup js-tags">
+				<a class="tag-button--all" data-encode="">
+					Ver todos
+					<sup>{{site.posts.size}}</sup>
+				</a>
+
+				{% capture tags %}
+				{% for tag in site.tags %}
+				<a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"
+					data-encode="{{ tag[0] | strip | url_encode }}" class="tag-button" title="{{ tag[0] }}"
+					rel="{{ tag[1].size }}">
+					{{ tag[0] }}
+					<sup>{{tag[1].size}}</sup>
+				</a>__SEPERATOR__
+				{% endfor %}
+				{% endcapture %}
+				{{ tags | split:'__SEPERATOR__' | sort }}
 			</div>
-		{% endif %}{% endfor %}
-		{% endunless %}{% endfor %}
+
+			<!-- Article List -->
+			<div class="mini-post-list js-result">
+				{%- assign _sorted_list = site.posts -%}
+				{%- assign _sorted_list = _sorted_list | sort: 'date' -%}
+				{%- assign _sorted_list = _sorted_list | reverse -%}
+
+
+				{%- for _article in _sorted_list -%}
+				{%- assign _tags = '' -%}
+				{%- for _tag in _article.tags -%}
+				{%- assign _tag_encode = _tag | strip | url_encode -%}
+				{%- if forloop.last -%}
+				{%- assign _tags = _tags | append: _tag_encode -%}
+				{%- else -%}
+				{%- assign _tags = _tags | append: _tag_encode | append: ',' -%}
+				{%- endif -%}
+				{%- endfor -%}
+
+				{% comment %} group by year {% endcomment %}
+				{%- assign _currentdate = _article.date | date: '%Y' -%}
+				{%- if _currentdate != _date -%}
+				{%- unless forloop.first -%}</section>{%- endunless -%}
+				<section>
+					<span class="fa listing-seperator">
+						<span class="tag-text">{{ _currentdate }}</span>
+					</span>
+					{%- assign _date = _currentdate -%}
+					{%- endif -%}
+
+					<div class="post-preview item" data-tags="{{ _tags }}">
+						<a href="{{ _article.url | prepend: site.baseurl }}">
+							<h2 class="post-title">
+								{{ _article.title }}
+							</h2>
+							{% if _article.subtitle %}
+							<h3 class="post-subtitle">
+								{{ _article.subtitle }}
+							</h3>
+							{% endif %}
+						</a>
+						<hr>
+					</div>
+					{%- if forloop.last -%}
+				</section>{%- endif -%}
+				{% endfor %}
+			</div>
+		</div>
 	</div>
 </div>

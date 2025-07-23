@@ -1,160 +1,94 @@
 # Site settings
-site: Ephesus
-title: Jandrey
-keywords: personal, blog, tecnologia, tech, developer
-description: >-
-  Blog pessoal para falar sobre tecnologia, alegria e frustrações da vida.
-lang: pt-BR
-timezone:  Sao_Paulo/Brasil
-logo: /assets/images/logo.png
-#repo: https://github.com/onepase/Ephesus # site repo [optional]
-#google_verify:      XXX # Put your Google Verification here
-google_analytics: G-YBRQKJ6YXS # Put your Google Analytics code
-last_works:
-  - position: Full Stack Developer
-    company: Rentcars
-    date: (2024-current)
-    image: /assets/images/rentcars.png
-    description: Desenvolver soluções principalmente na área de experiência do usuário, criando novos fluxos e mantendo soluções já existentes, analisando possíveis implementações para guiar o time de desenvolvimento.
-    skills:
-      - PHP
-      - VueJS
-  - position: Tech Lead
-    company: Codesign - Software House
-    date: (2023-2024)
-    image: /assets/images/codesign.jpeg
-    description: Liderança técnica, orientando o time de desenvolvimento na escolha de tecnologias, arquitetura de código e infraestrutura em nuvem (AWS). Mantive interação próxima com o suporte a clientes e antecipar possíveis problemas futuros.
-    skills:
-      - JIRA
-      - AWS
-      - Github Actions
-  - position: Full Stack Developer
-    company: Codesign - Software House
-    date: (2021-2023)
-    image: /assets/images/codesign.jpeg
-    description: Desenvolvimento de APIs utilizando Laravel (PHP) para sistemas financeiros, além da criação de interfaces web com React.JS e implementação de infraestrutura em nuvem (AWS).
-    skills:
-      - Laravel
-      - ReactJS
-      - Docker
-  - position: Full Stack Developer
-    company: Grupo CaspBrasil 
-    date: (2018-2021)
-    image: /assets/images/casp.jpeg
-    description: Contribuições significativas no desenvolvimento de uma plataforma de inscrições de eventos online e plugins de integração para Wordpress.
-    skills:
-      - PhalconPHP
-      - Angular
-      - Gitlab
-      - Wordpress
-  - position: Estagiário de tecnologia
-    company: Prefeitura de São José dos Pinhais
-    date: (2016-2018)
-    image: /assets/images/prefa.jpeg
-    description: Desempenhei o papel de atendente no Help Desk, fornecendo suporte técnico aos funcionários e, posteriormente, desenvolvi sistemas para otimizar as operações da equipe de TI
-    skills:
-      - Javascript
-      - Angular
-      - PHP
-      - Help Desk
+title: Lucas Jandrey
+SEOTitle: Lucas Jandrey | Blog
+header-img: img/home-bg.jpg
+email: lucas@jandrey.dev
+description: "Assuntos que eu vou trazer em alguma conversa de bar ou em uma reunião empresarial"
+keyword: "Programação, Tecnologia, Filosofia, Sociologia, Videogames, Séries, Filmes"
+url: "https://jandrey.dev" # your host, for absolute URL
+baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
-hard_skills:
-  - name: PHP
-    icon: icons/php.svg
-    years: 8 Anos
-    description: Laravel, Phalcon Framework, Slim Micro-framework, Testes, PHP Spredsheet, FPM
-  - name: Javascript
-    icon: icons/javascript.svg
-    years: 8 Anos
-    description: NodeJS, TypeScript, Express, Restify, Gulp, Webpack, ReactJS, Canvas, jQuery
-  - name: ReactJS
-    icon: icons/react.svg
-    years: 5 Anos
-    description: ContextAPI, Redux, StyledComponents, MaterialUI
-  - name: AWS
-    icon: icons/aws.svg
-    years: 3 Anos
-    description: EC2, S3, CloudFront, VPC, RDS, CodePipeline
-  - name: Outras Ferramentas
-    icon: icons/linux.svg
-    description: Linux, Docker, Nginx, Github Actions, Gitlab CI/CD, Jira Software, Jira Service Management
+# Publish posts or collection documents with a future date.
+future: true
 
-soft_skills:
-  - name: Criativo
-  - name: Pensamento crítico
-  - name: Empatia
-  - name: Comunicação eficaz
-  - name: Flexibilidade
+# SNS settings
+RSS: true
+#weibo_username: huxpro
+#zhihu_username: huxpro
+github_username: jandr3y
+twitter_username: jandr3y
+#facebook_username:  huxpro
+#linkedin_username:  firstname-lastname-idxxxx
 
-
-
-# Author settings
-author:
-  name: Lucas Andrade Jandrey
-  bio: Software Developer<br>Curitiba, PR
-  full_bio: Com aproximadamente oito anos de experiência profissional em programação e um grande foco no desenvolvimento web, atuo em várias áreas desse campo. Meu conhecimento abrange o desenvolvimento de APIs utilizando PHP e Javascript, a criação de interfaces front-end com React, e contribuições significativas para soluções DevOps, com foco em tecnologias como Docker e AWS. Meus interesses atuais giram em torno de temas como escalabilidade, padrões e estruturas de código, além do gerenciamento eficiente de projetos.
-  picture: /assets/images/profile.jpeg 
-  github: jandr3y # github usernam
-  twitter: jandr3y # twitter username
-  instagram: luacks # instagram username
-  #youtube: https://www.youtube.com/channel/UCMmAto-wxBootXN91AzBiDg # youtube username
-  linkedin: luacks # linkedin username
-  email: lucas@jandrey.dev # email adress
-
-
-# URL settings
-url: "https://jandrey.dev" # Domain Name of host. [username].github.io for github pages
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
 permalink: pretty
+paginate: 10
+exclude:
+  [
+    "less",
+    "node_modules",
+    "Gruntfile.js",
+    "package.json",
+    "README.md",
+    "README.zh.md",
+  ]
+anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN
 
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+  input: GFM # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
+# Disqus settings
+disqus_username: lucas-jandrey
 
-exclude:
-  - .jekyll-cache
-  - .obsidian
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE.md
-  - README.md
-  - CONTRIBUTING.md
+# Netease settings
+netease_comment: false
 
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-relative-links
-paginate: 20
-paginate_path: "/blog/:num"
+# Analytics settings
+# Baidu Analytics
+# ba_track_id: [your track id]
 
-collections:
-  pages:
-    output: true
-    permalink: /:name
-  posts:
-    output: true
-    permalink: /:slug
-  
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+# Google Analytics
+ga_track_id: "G-YBRQKJ6YXS" # Format: UA-xxxxxx-xx
+ga_domain: jandrey.dev
 
-relative_links:
-  enabled:     true
-  collections: false
+# Sidebar settings
+sidebar: true # whether or not using Sidebar.
+sidebar-about-description: "Software Engineer <br> Logcomex"
+sidebar-avatar: https://github.com/jandr3y.png # use absolute URL, seeing it's used in both `/` and `/about/`
+
+# Featured Tags
+featured-tags: true # whether or not using Feature-Tags
+featured-condition-size: 0 # A tag will be featured if the size of it is more than this condition value
+tags:
+  - poemas
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+
+# Friends
+friends: false

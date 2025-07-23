@@ -1,12 +1,7 @@
-source "https://rubygems.org"
-gem "jekyll", github: "jekyll/jekyll", ref: "refs/pull/9248/head"
+source 'https://rubygems.org'
 gem 'jekyll-paginate'
-gem 'jekyll-sitemap'
-gem 'jekyll-relative-links'
-gem "tzinfo-data", "~> 1.2021"
 
-# windows specific
-gem 'wdm', '>= 0.1.0'
+gem "jekyll", "~> 4.0"
+gem "rake"
 
-# update ruby version
-gem 'webrick'
+gem "webrick", "~> 1.7"

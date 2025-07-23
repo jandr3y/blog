@@ -1,62 +1,63 @@
-# Ephesus
+[Hux Blog](https://huangxuan.me)
+================================
 
-Ephesus Jekyll Theme - Simple and Minimal Jekyll Blog Theme
+> I never expected this to become popular.
 
-Author [Hakan Torun](https://hakan.io).
+![](http://huangxuan.me/img/blog-desktop.jpg)
 
-- **Demo:** https://pardin.us/ephesus/
 
-### Features
+[User Manual 👉](_doc/Manual.md)
+--------------------------------------------------
 
-- [x] Tiny CSS & No Dependency
-- [x] Responsive Design
-- [x] Dark/Light Theme
-- [x] Custom 404 Page
-- [x] About Page
-- [x] Tags Page
-- [x] Code Highlighter
-- [x] Social Share
-- [x] Atom & Json feeds
-- [x] Robots.txt
-- [x] Sitemap
-- [x] Next & Previous Post
-- [x] Pagination
-- [x] Disqus
-- [x] Mathjax Support
-- [x] Google Analytics
+### Getting Started
 
-## Screenshots
+1. You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
 
-#### Light
-![light-theme](https://github.com/onepase/Ephesus/blob/master/light.png)
+2. Installed dependencies in the `Gemfile`:
 
-#### Dark
-![dark-theme](https://github.com/onepase/Ephesus/blob/master/dark.png)
-
-## Installation
-
-Run local server:
-
-```bash
-$ git clone https://github.com/onepase/Ephesus.git
-$ cd Ephesus
-$ bundle install
-$ bundle exec jekyll build
-$ bundle exec jekyll serve
+```sh
+$ bundle install 
 ```
 
-Navigate to `127.0.0.1:4000`.
+3. Serve the website (`localhost:4000` by default):
 
-Tags are created automatically under the /tags page.
+```sh
+$ bundle exec jekyll serve  # alternatively, npm start
+```
 
-To use a math formula in a post, use the mathjax:true tag in the post.
+### Development (Build From Source)
 
-## Contributing
+To modify the theme, you will need [Grunt](https://gruntjs.com/). There are numbers of tasks you can find in the `Gruntfile.js`, includes minifing JavaScript, compiling `.less` to `.css`, adding banners to keep the Apache 2.0 license intact, watching for changes, etc. 
 
-Feel free to open a pull request for contributing.
+Yes, they were inherited and are extremely old-fashioned. There is no modularization and transpilation, etc.
 
-Please feel free to contribute. Do not hesitate to open a pull request and fix it, please read [contributing](./CONTRIBUTING.md) before PR.
+Critical Jekyll-related code are located in `_include/` and `_layouts/`. Most of them are [Liquid](https://github.com/Shopify/liquid/wiki) templates.
 
-## License
+This theme uses the default code syntax highlighter of jekyll, [Rouge](http://rouge.jneen.net/), which is compatible with Pygments theme so just pick any pygments theme css (e.g. from [here](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html) and replace the content of `highlight.less`.
 
-This project is open source and available under the [MIT License](LICENSE.md).
+
+### Interesting to know more? Checkout the [full user manual](_doc/Manual.md)!
+
+
+Other Resources
+---------------
+
+Ports
+- [**Hexo**](https://github.com/Kaijun/hexo-theme-huxblog) by @kaijun
+- [**React-SSR**](https://github.com/LucasIcarus/huxpro.github.io/tree/ssr) by @LucasIcarus
+
+[Starter/Boilerplate](https://github.com/huxpro/huxblog-boilerplate)
+- Out of date. Helps wanted for updating it on par with the main repo
+
+Translation
+- [🇨🇳  中文文档（有点过时）](https://github.com/Huxpro/huxpro.github.io/blob/master/_doc/README.zh.md)
+
+
+License
+-------
+
+Apache License 2.0.
+Copyright (c) 2015-present Huxpro
+
+Hux Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
+Copyright (c) 2013-2016 Blackrock Digital LLC.

@@ -1,28 +1,48 @@
 ---
 layout: page
-title: "Blog"
+description: "Assuntos que eu irei trazer em alguma conversa de bar ou em uma reunião empresarial"
 ---
-<div class="container">
-    <div class="row section-spacing">
-        <div class="col-lg-12">
-            <h3>Últimos posts</h3>
-            {% for post in site.posts %}
-                <div class="posts__item">
-                    <a href="{{ site.url }}{{ post.url }}">
-                        <h3>{{ post.title }}</h3>
-                        <p>
-                            {{ post.excerpt }}
-                        </p>
-                    </a>
-                    <small>
-                        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%d/%m/%Y" }}</time>
-                    </small>
-                </div>
-            {% endfor %}
 
-            
-            {% include pagination.html %}
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {% if post.lang == 'en' %}
+                {{ post.excerpt | strip_html | truncate:300 }}
+            {% else %}
+                {{ post.excerpt | strip_html | truncate:200 }}
+            {% endif %}
         </div>
-    </div>
-    
+    </a>
+    <p class="post-meta">
+        <small>
+            Publicado por {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} em {{ post.date | date: "%-d/%m/%Y" }}
+        </small>
+    </p>
 </div>
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Anterior</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Próximo &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
