@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-  --primary-color: darkgreen;
-  --primary-color-light: rgba(90, 141, 90, 0.247);
+  --primary-color: #2c4563;
+  --primary-color-light: #d7e9ff;
   --font-color: #333;
-  --bg-color: white;
+  --bg-color: rgb(245, 249, 255);
 }
 
 [data-theme="dark"] {
-  --primary-color: #4e924e;
-  --primary-color-light: rgb(0 0 0 / 25%);
+  --primary-color: #2c4563;
+  --primary-color-light: #d7e9ff;
   --font-color: #d6f7d6;
   --bg-color: #161625;
 }
@@ -43,11 +43,37 @@ h1, h2, h3, h4, p {
 }
 
 .navigation {
-  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 13px;
+  font-weight: 700;
+  margin-bottom: 9px;
+  color: #2c4563;
 }
 
 .navigation__logo {
   height: 40px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.navigation__logo a {
+  color: #2c4563;
+  text-decoration: none;
+}
+
+
+.navigation__logo a:hover {
+  color: #2c4563;
+  text-decoration: underline;
+}
+
+.navigation__logo-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
 }
 
 .navigation__menu li.active  {
@@ -239,15 +265,39 @@ h1, h2, h3, h4, p {
 }
 
 .posts__item {
-  border: 1px solid var(--primary-color-light);
-  padding: 14px;
-  border-radius: 7px;
-  margin: 15px 0;
+  margin: 8px 0;
   display: flex;
   justify-content: space-between;
-  border: 1px solid var(--primary-color);
-  border-left: 3px solid var(--primary-color);
+  border: 1px solid #9ab9df;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
 
+.posts__item h3 {
+  font-weight: 600;
+  color: #2c4563;
+  font-size: 1em;
+}
+
+.posts__item .posts__item-icon {
+  width: 50px;
+  background-color: #d7e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.posts__item a {
+  flex: 1;
+  padding: 10px;
+}
+
+.posts__item p {
+  font-size: 0.8em;
+  margin-top: 2px;
+  color: #7c7c7c;
 }
 
 .author {
@@ -264,7 +314,7 @@ h1, h2, h3, h4, p {
 
 .posts__item:first-child {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .posts__item a {
@@ -272,8 +322,26 @@ h1, h2, h3, h4, p {
   text-decoration: none;;
 }
 
+.menu {
+  display: flex;
+  gap: 4px;
+}
+
+.menu__button {
+  background-color: #2c4563;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8em;
+  border-bottom: 3px solid #0f1b2b;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
 .post-header {
-  height: 200px;
   display: flex;
   align-items: end;
 }

@@ -1,0 +1,31 @@
+---
+title: "Black Mirror S07E01 - Decisões absurdamente burras"
+date: 2025-04-15T00:00:00+00:00
+author: Lucas Jandrey
+layout: post
+permalink: /posts/black-mirror-s07e01-decisoes-absurdamente-burras
+categories: Series, text
+tags: [series, text]
+excerpt: "Um roteiro sem construação nenhuma de personagens, apenas sofrimento decorrente do capitalismo e decisões burras."
+---
+**Alerta de spoiler dos episódios: S07E01 e S02E04**
+
+Ontem terminei de assistir ao primeiro episódio da nova temporada de uma série que gosto muito: Black Mirror. A série sempre me causou fortes emoções, pois seus episódios abordam problemas atuais — ou consequências de novas tecnologias — com um exagero muitas vezes perturbador da forma como os humanos interagem com essas situações.
+
+![Casal principal sentado no escritório para ver sobre a tecnologia de manter a mulher viva](/assets/images/posts/black-mirror-s07e01-2.png)
+
+Ao longo dessas sete temporadas, lembro de episódios que me causaram aquele aperto no coração, geralmente por um desfecho totalmente inesperado. Um exemplo é o episódio S02E04, que conta algumas histórias e uma delas é de uma traição envolvendo uma tecnologia de lentes de contato. Nele, a esposa, para não magoar o marido, decide bloquear judicialmente a filha, impedindo que ele a veja. O pai passa a vida tentando encontrá-la, até que, no final, descobre que a filha não era sua. Esse episódio é como levar um soco no peito — quando, junto com o pai, você finalmente vê a garota e percebe que ela tem traços de outra pessoa.
+
+![Homem olhando para a ex-esposa e a possível filha bloqueada pela tecnologia da lente](/assets/images/posts/black-mirror-s07e01-1.png)
+
+Voltando ao episódio S07E01, a premissa principal gira em torno de uma mulher com um problema cerebral terminal. Ao marido, é oferecida uma solução tecnológica para manter a consciência dela viva. Até aqui, tudo dentro da essência do Black Mirror que eu gosto: uma tecnologia inovadora combinada com um absurdo ético ou humano. O problema é que a família não consegue arcar com os custos da tecnologia privada, e o sistema começa a exibir anúncios através da fala da mulher.
+
+A partir desse ponto, a história se perde em uma série de decisões questionáveis tomadas pelo marido. Não há um desenvolvimento profundo do personagem — de repente, ele começa a se mutilar em lives na internet para arrecadar dinheiro e bancar o tratamento da esposa.
+
+Apesar de sabermos que esse tipo de conteúdo extremo existe hoje em plataformas online, não é algo que acontece de forma tão simples. As pessoas não perdem o emprego num dia e começam a se mutilar no outro. Existe toda uma construção emocional, social e familiar para que alguém se submeta a isso — e, na série, a família parecia bem estruturada.
+
+No final das contas, senti que assisti a uma sequência de situações perturbadoras sem o devido contexto, além do já esperado desespero financeiro. A degradação do ser humano costuma acontecer de forma mais gradual e complexa, e não tão rasa como foi apresentada. Mesmo que a série não tenha tanto tempo para aprofundar todos os personagens, acho que dava para construir melhor essa trajetória para causar um impacto real.
+
+Ainda não assisti aos outros episódios, mas pretendo continuar. Por enquanto, essa foi a minha impressão do primeiro. Faltou uma construção melhor dos personagens. Talvez eu esteja mais atento a assuntos como políticas públicas ultimamente, mas me peguei pensando que, no Brasil, esse tipo de tratamento provavelmente existiria pelo SUS — o que já encerraria o episódio antes de começar, hehe.
+
+E você, o que achou desse episódio?
