@@ -7,6 +7,33 @@ Com aproximadamente oito anos de experiência profissional em programação e um
 <div class="job-xp">
     <div class="job-xp__top">
         <div class="job-xp__image">
+            <img src="{{ site.baseurl }}/img/jobs/logcomex.jpeg" />
+        </div>
+        <div class="job-xp__content">
+            <h3>PL Software Engineer</h3>
+            <span>
+                Logcomex · Tempo integral<br />
+                abr de 2025 - atual<br />
+                Curitiba, Paraná, Brasil · Híbrida
+            </span>
+            <p>
+                Atuação no desenvolvimento de soluções voltadas para importadores e despachantes, contribuindo para a criação e otimização de fluxos operacionais relacionados aos processos de importação e exportação (BR/MX). Responsável por evoluir funcionalidades existentes e implementar novas ferramentas que apoiam a gestão e o acompanhamento das etapas do comércio exterior, aumentando a eficiência e reduzindo complexidade para os usuários.
+            </p>
+            <div class="job-xp__tags">
+                <div>PHP</div>
+                <div>Laravel</div>
+                <div>VueJS</div>
+                <div>Tailwind</div>
+                <div>Datadog</div>
+                <div>I18N</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="job-xp">
+    <div class="job-xp__top">
+        <div class="job-xp__image">
             <img src="{{ site.baseurl }}/img/jobs/rent.jpeg" />
         </div>
         <div class="job-xp__content">
