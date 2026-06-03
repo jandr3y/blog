@@ -3,9 +3,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="{{ site.description }}">
-    <meta name="keywords" content="{{ site.keyword }}">
-    <meta name="theme-color" content="{{ site.chrome-tab-theme-color }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}{% else %}{{ site.keyword }}{% endif %}">
+    <meta name="theme-color" content="{{ site.theme-color | default: '#000000' }}">
+
+    {% capture og_image %}
+      {%- if page.header-img -%}
+        {%- if page.header-img contains '://' -%}
+          {{ page.header-img }}
+        {%- else -%}
+          {{ site.url }}/{{ page.header-img | remove_first: '/' }}
+        {%- endif -%}
+      {%- else -%}
+        {{ site.url }}{{ site.sidebar-avatar }}
+      {%- endif -%}
+    {% endcapture %}
+    {%- assign og_image = og_image | strip -%}
 
     <!-- Open Graph -->
     <meta property="og:title"
@@ -28,14 +41,22 @@
     <meta property="og:description"
         content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% endcase %}
-    <meta property="og:image" content="{{ site.url }}{{ site.sidebar-avatar }}">
+    <meta property="og:image" content="{{ og_image }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.SEOTitle }}">
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{{ og_image }}">
+
     <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}</title>
 
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="{{ site.baseurl }}/pwa/manifest.json">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">

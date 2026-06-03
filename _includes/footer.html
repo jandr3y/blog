@@ -33,11 +33,6 @@
 <!-- Simple Jekyll Search -->
 <script src="{{ "/js/simple-jekyll-search.min.js" | prepend: site.baseurl }}"></script>
 
-<!-- Service Worker -->
-{% if site.service-worker %}
-<script src="{{ "/js/snackbar.js " | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/sw-registration.js " | prepend: site.baseurl }}"></script>
-{% endif %}
 
 <!-- async load function -->
 <script>
@@ -221,7 +216,7 @@
 <!-- Handle Language Change -->
 <script type="text/javascript">
     // get nodes
-    var $zh = document.querySelector(".zh");
+    var $pt = document.querySelector(".pt");
     var $en = document.querySelector(".en");
     var $select = document.querySelector("select");
 
@@ -242,13 +237,13 @@
             $select.selectedIndex = 1;
             $en.style.display = "block";
             $en.classList.add("active");
-            $zh.style.display = "none";
-            $zh.classList.remove("active");
-            // default to zh-cn
+            $pt.style.display = "none";
+            $pt.classList.remove("active");
+            // default to pt
         } else {
             $select.selectedIndex = 0;
-            $zh.style.display = "block";
-            $zh.classList.add("active");
+            $pt.style.display = "block";
+            $pt.classList.add("active");
             $en.style.display = "none";
             $en.classList.remove("active");
         }
@@ -259,7 +254,7 @@
     // handle select change
     function onLanChange(index) {
         if (index == 0) {
-            lang = "zh"
+            lang = "pt"
         } else {
             lang = "en"
         }

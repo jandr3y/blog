@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="Assuntos que eu vou trazer em alguma conversa de bar ou em uma reunião empresarial">
+    <meta name="description" content="A mente do vilão separada por temas">
     <meta name="keywords" content="Programação, Tecnologia, Filosofia, Sociologia, Videogames, Séries, Filmes">
     <meta name="theme-color" content="#000000">
 
@@ -18,20 +18,28 @@
     <meta property="og:description"
         content="A mente do vilão separada por temas">
     
-    <meta property="og:image" content="http://localhost:4000https://github.com/jandr3y.png">
-    <meta property="og:url" content="http://localhost:4000/tags/">
+    <meta property="og:image" content="https://jandrey.dev/imgbg-little-universe.jpg">
+    <meta property="og:url" content="https://jandrey.dev/tags/">
     <meta property="og:site_name" content="Lucas Jandrey | Blog">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tags - Lucas Jandrey | Blog">
+    <meta name="twitter:description" content="Assuntos que eu vou trazer em alguma conversa de bar ou em uma reunião empresarial">
+    <meta name="twitter:image" content="https://jandrey.dev/imgbg-little-universe.jpg">
 
     <title>Tags - Lucas Jandrey | Blog</title>
 
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="/pwa/manifest.json">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/tags/">
+    <link rel="canonical" href="https://jandrey.dev/tags/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href=" /css/bootstrap.min.css">
@@ -112,7 +120,7 @@
                         
                         
                         <li class="search-icon">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" aria-label="Buscar">
                                 <i class="fa fa-search"></i>
                             </a>
                         </li>
@@ -245,17 +253,51 @@ https://github.com/kitian616/jekyll-TeXt-theme
 			<div id='tag_cloud' class="tags tags-sup js-tags">
 				<a class="tag-button--all" data-encode="">
 					Ver todos
-					<sup>0</sup>
+					<sup>2</sup>
 				</a>
 
 				
 				
 				
 				
+				
+				<a data-sort="0000"
+					data-encode="tecnologia" class="tag-button" title="tecnologia"
+					rel="2">
+					tecnologia
+					<sup>2</sup>
+				</a>
 			</div>
 
 			<!-- Article List -->
-			<div class="mini-post-list js-result">
+			<div class="mini-post-list js-result"><section>
+					<span class="fa listing-seperator">
+						<span class="tag-text">2026</span>
+					</span><div class="post-preview item" data-tags="tecnologia">
+						<a href="/2026/06/03/venda-frontend/">
+							<h2 class="post-title">
+								Venda o front-end enquanto você arruma o back-end
+							</h2>
+							
+							<h3 class="post-subtitle">
+								
+							</h3>
+							
+						</a>
+						<hr>
+					</div><div class="post-preview item" data-tags="tecnologia">
+						<a href="/2026/02/08/update-do-opentelemetry/">
+							<h2 class="post-title">
+								O dia em que o OpenTelemetry quase me fez chorar
+							</h2>
+							
+							<h3 class="post-subtitle">
+								
+							</h3>
+							
+						</a>
+						<hr>
+					</div></section>
 			</div>
 		</div>
 	</div>
@@ -276,7 +318,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
   
   <li>
-    <a href="/feed.xml">
+    <a href="/feed.xml" aria-label="Feed RSS">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -285,21 +327,12 @@ https://github.com/kitian616/jekyll-TeXt-theme
   </li>
   
   
-  <li>
-    <a href="https://twitter.com/jandr3y">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
   
   
   
   
   <li>
-    <a target="_blank" href="https://github.com/jandr3y">
+    <a target="_blank" href="https://github.com/jandr3y" aria-label="GitHub">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -308,10 +341,19 @@ https://github.com/kitian616/jekyll-TeXt-theme
   </li>
   
   
+  <li>
+    <a target="_blank" href="https://www.linkedin.com/in/luacks" aria-label="LinkedIn">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
 </ul>
 
                 <p class="copyright text-muted">
-                    Copyright &copy; Lucas Jandrey 2025
+                    Copyright &copy; Lucas Jandrey 2026
                     <br>
                     Powered by <a href="http://huangxuan.me">Hux Blog</a> |
                     <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
@@ -336,11 +378,6 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
 <!-- Simple Jekyll Search -->
 <script src="/js/simple-jekyll-search.min.js"></script>
-
-<!-- Service Worker -->
-
-<script src="/js/snackbar.js "></script>
-<script src="/js/sw-registration.js "></script>
 
 
 <!-- async load function -->

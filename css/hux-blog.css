@@ -1,3 +1,8 @@
+/*!
+ * Hux Blog v1.8.2 (http://huxpro.github.io)
+ * Copyright 2026 Hux <huxpro@gmail.com>
+ */
+
 @media (min-width: 1200px) {
   .post-container,
   .sidebar-container {
@@ -14,11 +19,11 @@
   font-size: 14px;
 }
 .sidebar-container h5 {
-  color: #a3a3a3;
+  color: #707070;
   padding-bottom: 1em;
 }
 .sidebar-container h5 a {
-  color: #a3a3a3 !important;
+  color: #707070 !important;
   text-decoration: none;
 }
 .sidebar-container a {
@@ -26,14 +31,14 @@
 }
 .sidebar-container a:hover,
 .sidebar-container a:active {
-  color: #0085a1 !important;
+  color: #2e7c38 !important;
 }
 .sidebar-container .tags a {
   border-color: #bfbfbf;
 }
 .sidebar-container .tags a:hover,
 .sidebar-container .tags a:active {
-  border-color: #0085a1;
+  border-color: #2e7c38;
 }
 .sidebar-container .short-about img {
   width: 80%;
@@ -129,182 +134,12 @@
   background-color: #f5f5f5;
 }
 .side-catalog .catalog-body .active a {
-  color: #0085a1 !important;
+  color: #2e7c38 !important;
 }
 @media (max-width: 1200px) {
   .side-catalog {
     display: none;
   }
-}
-/*
-  Please note this CSS is currently in   prototype form. We'll implement a cleaned up version in Web Starter Kit.
-*/
-.paper-snackbar {
-  transition-property: opacity, bottom, left, right, width, margin, border-radius;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
-  /*font-family: RobotoDraft;*/
-  font-size: 14px;
-  min-height: 14px;
-  background-color: #323232;
-  background-color: #0085a1;
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  line-height: 22px;
-  padding: 18px 24px;
-  bottom: 0px;
-  opacity: 0;
-}
-@media (min-width: 640px) {
-  .paper-snackbar {
-    /*
-    Desktop:
-      Single-line snackbar height: 48 dp tall
-      Minimum width: 288 dp
-      Maximum width: 568 dp
-      2 dp rounded corner
-      Text: Roboto Regular 14 sp
-      Action button: Roboto Medium 14 sp, all-caps text
-      Default background fill: #323232 100%
-    */
-    min-width: 288px;
-    max-width: 568px;
-    display: inline-flex;
-    border-radius: 2px;
-    margin: 24px;
-    bottom: -100px;
-  }
-}
-@media (max-width: 640px) {
-  .paper-snackbar {
-    /*
-  Mobile:
-    Single-line snackbar height: 48 dp
-    Multi-line snackbar height: 80 dp
-    Text: Roboto Regular 14 sp
-    Action button: Roboto Medium 14 sp, all-caps text
-    Default background fill: #323232 100%
-  */
-    left: 0px;
-    right: 0px;
-  }
-}
-.paper-snackbar .action {
-  background: inherit;
-  display: inline-block;
-  border: none;
-  font-size: inherit;
-  text-transform: uppercase;
-  color: #ffeb3b;
-  margin: 0px 0px 0px 24px;
-  padding: 0px;
-  min-width: min-content;
-  outline: 0px;
-}
-/* Everything from here down is actually just for the demo - the material buttons and card, and various other pieces of styling */
-/* Variables */
-/* Buttons */
-.paper-button {
-  position: relative;
-  padding: 4px 0;
-  margin: 1em;
-  width: 160px;
-  overflow: hidden;
-  user-select: none;
-  color: #000000;
-  text-transform: uppercase;
-  border-radius: 3px;
-  outline-color: #a3a3a3;
-}
-.paper-button:hover {
-  cursor: pointer;
-}
-.paper-button button,
-.paper-button input[type="submit"] {
-  background: inherit;
-  border: none;
-  display: block;
-  width: 100%;
-  height: 100%;
-  /*font-family: 'Roboto';*/
-  font-size: 1em;
-  color: #000000;
-  text-transform: uppercase;
-}
-.paper-button.colored,
-.paper-button.colored button {
-  color: #4285f4;
-}
-.paper-button.raised-button.colored {
-  background-color: #4285f4;
-}
-.paper-button .raised-button {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-}
-.paper-button.raised-button.colored {
-  background: #4285f4;
-  color: #fff;
-}
-.paper-button[disabled] {
-  background-color: #eaeaea !important;
-  color: #a8a8a8 !important;
-  cursor: auto;
-}
-.paper-button:hover {
-  background-color: #eaeaea;
-}
-.paper-button.raised-button.colored:hover {
-  background-color: #3367d6;
-}
-button.paper-button {
-  border: 0;
-  /*font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;*/
-  font-size: 1em;
-  line-height: 25px;
-  background-color: #ffffff;
-}
-.paper-button input[type="submit"] {
-  outline-color: #a3a3a3;
-}
-.paper-button.colored.raised-button input[type="submit"] {
-  color: #ffffff;
-}
-/** Shadows **/
-.paper-shadow-animated.paper-shadow {
-  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.paper-shadow-top-z-1 {
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
-}
-.paper-shadow-bottom-z-1 {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-}
-.paper-shadow-top-z-2 {
-  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.paper-shadow-bottom-z-2 {
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-}
-.paper-shadow-top-z-3 {
-  box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-.paper-shadow-bottom-z-3 {
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
-}
-.paper-shadow-top-z-4 {
-  box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21);
-}
-/** Card **/
-.card {
-  background: white;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  margin: 16px;
-  border-radius: 2px;
 }
 .highlight,
 pre.highlight {
@@ -651,6 +486,57 @@ pre.highlight {
 .search-icon-close {
   font-size: 16px;
 }
+.job-xp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 48px;
+}
+.job-xp__top {
+  display: flex;
+  gap: 16px;
+}
+.job-xp__image img {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background: #f3f6f8;
+  object-fit: cover;
+  margin: 0;
+}
+.job-xp__content {
+  flex: 1;
+}
+.job-xp__content h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.job-xp__content span {
+  color: #666;
+  display: block;
+  font-size: 0.9em;
+}
+.job-xp__content p {
+  margin-top: 12px;
+  margin-bottom: 16px;
+  color: #333;
+}
+.job-xp__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.job-xp__tags div {
+  background: #2e7c38;
+  color: white;
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-size: 0.75em;
+  font-weight: 500;
+}
 body {
   /* Hux learn from
      *     TypeIsBeautiful,
@@ -696,7 +582,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #2e7c38;
 }
 a img:hover,
 a img:focus {
@@ -781,7 +667,7 @@ samp {
 }
 .post-container a:hover,
 .post-container a:focus {
-  color: #0085a1;
+  color: #2e7c38;
 }
 .post-container h1,
 .post-container h2,
@@ -891,7 +777,7 @@ samp {
   width: 100%;
 }
 .post-container .pager li > a > span {
-  color: #a3a3a3;
+  color: #707070;
   font-weight: normal;
   letter-spacing: 0.5px;
 }
@@ -1045,14 +931,14 @@ samp {
 }
 .navbar-custom.invert .navbar-brand:hover,
 .navbar-custom.invert .navbar-brand:focus {
-  color: #0085a1;
+  color: #2e7c38;
 }
 .navbar-custom.invert .nav li a {
   color: #404040;
 }
 .navbar-custom.invert .nav li a:hover,
 .navbar-custom.invert .nav li a:focus {
-  color: #0085a1;
+  color: #2e7c38;
 }
 @media only screen and (min-width: 1170px) {
   .navbar-custom {
@@ -1083,14 +969,14 @@ samp {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #0085a1;
+    color: #2e7c38;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #0085a1;
+    color: #2e7c38;
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -1103,7 +989,7 @@ samp {
 }
 .intro-header {
   background: no-repeat center center;
-  background-color: #a3a3a3;
+  background-color: #707070;
   background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1260,7 +1146,7 @@ samp {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #0085a1;
+  color: #2e7c38;
 }
 .post-preview > a > .post-title {
   font-size: 21px;
@@ -1277,7 +1163,7 @@ samp {
 }
 .post-preview > .post-meta {
   font-family: 'Lora', 'Times New Roman', serif;
-  color: #a3a3a3;
+  color: #707070;
   font-size: 16px;
   font-style: italic;
   margin-top: 0;
@@ -1288,7 +1174,7 @@ samp {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #0085a1;
+  color: #2e7c38;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -1307,10 +1193,10 @@ samp {
 .post-content-preview {
   font-size: 13px;
   font-style: italic;
-  color: #a3a3a3;
+  color: #707070;
 }
 .post-content-preview:hover {
-  color: #0085a1;
+  color: #2e7c38;
 }
 @media only screen and (min-width: 768px) {
   .post-content-preview {
@@ -1350,7 +1236,7 @@ footer .copyright a {
 }
 footer .copyright a:hover,
 footer .copyright a:focus {
-  color: #0085a1;
+  color: #2e7c38;
 }
 .btn {
   /* Hux learn from
@@ -1372,8 +1258,8 @@ footer .copyright a:focus {
 }
 .btn-default:hover,
 .btn-default:focus {
-  background-color: #0085a1;
-  border: 1px solid #0085a1;
+  background-color: #2e7c38;
+  border: 1px solid #2e7c38;
   color: white;
 }
 .pager {
@@ -1409,8 +1295,8 @@ footer .copyright a:focus {
 .pager li > a:hover,
 .pager li > a:focus {
   color: white;
-  background-color: #0085a1;
-  border: 1px solid #0085a1;
+  background-color: #2e7c38;
+  border: 1px solid #2e7c38;
 }
 .pager li > a:hover > span,
 .pager li > a:focus > span {
@@ -1420,19 +1306,19 @@ footer .copyright a:focus {
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
 .pager .disabled > span {
-  color: #a3a3a3;
+  color: #707070;
   background-color: #404040;
   cursor: not-allowed;
 }
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #2e7c38;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #2e7c38;
 }
 img::selection {
   color: white;
@@ -1516,7 +1402,7 @@ img::-moz-selection {
 #tag_cloud .tag:active,
 #tag_cloud a.focus,
 #tag_cloud .tag.focus {
-  background-color: #0085a1 !important;
+  background-color: #2e7c38 !important;
 }
 #tag_cloud a.focus,
 #tag_cloud .tag.focus {
@@ -1525,7 +1411,7 @@ img::-moz-selection {
 #tag_cloud a.tag-button--all,
 #tag_cloud .tag.tag-button--all {
   font-weight: 700;
-  color: #0085a1 !important;
+  color: #2e7c38 !important;
 }
 #tag_cloud a.tag-button--all:hover,
 #tag_cloud .tag.tag-button--all:hover,
@@ -1552,7 +1438,7 @@ img::-moz-selection {
   margin-top: 0px;
 }
 .listing-seperator {
-  color: #0085a1;
+  color: #2e7c38;
   font-size: 21px !important;
 }
 .listing-seperator::before {
