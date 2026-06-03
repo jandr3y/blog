@@ -16,9 +16,8 @@ RSS: true
 #weibo_username: huxpro
 #zhihu_username: huxpro
 github_username: jandr3y
-twitter_username: jandr3y
 #facebook_username:  huxpro
-#linkedin_username:  firstname-lastname-idxxxx
+linkedin_username: luacks
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
@@ -83,9 +82,9 @@ featured-condition-size: 0 # A tag will be featured if the size of it is more th
 tags:
   - poemas
 
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
+# Theme & General settings
+theme-color: "#000000"
+lang: pt-BR
 
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
